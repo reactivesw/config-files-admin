@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: api-gateway-admin
+
+zuul:
+  routes:
+    category:
+      path: /categories/**
+      url: http://category-admin/
+    product:
+      path: /products/**
+      url: http://product-admin/
+    product-type:
+      path: /product-types/**
+      url: http://product-type-admin/
+    inventory:
+      path: /inventory/**
+      url: http://inventory-admin/
